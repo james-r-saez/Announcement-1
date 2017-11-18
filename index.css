@@ -1,0 +1,123 @@
+		* {								
+  			box-sizing: border-box; 
+  			padding: 0;
+  			margin: 0;
+		}
+		.container {
+			display: grid;
+			border: 2px black solid;
+			height: auto;
+			grid-template-columns: 1fr 1.5fr;
+			grid-template-rows: .75fr 1fr .75fr;
+		}
+		.box {
+  			background-color: white;
+  			text-align: center;
+		}
+		.a {
+			grid-area: 1 / 1 / span 1 / span 2;
+			background-color: #00610B;
+			
+		}
+		.b {
+			grid-area: 2 / 2 / span 1 / span 1;	
+			background-color: #00B248;
+		}
+		.c {
+			grid-area: 2 / 1 / span 1 / span 1;	
+			background-color: #00401A;
+		}
+		.d {
+			grid-area: 3 / 2 / span 1 / span 1;
+			background-color: #00401A;
+		}
+		.e {
+			grid-area: 3 / 1 / span 1 / span 1;	
+			background-color: #00B248;
+		}
+		#banner {
+			margin-bottom: 2em;
+			height: 40%;
+			width: 40%;
+		}
+		header {
+			font-size: 3.5em;
+			font-family: 'Alegreya SC', serif;
+			margin: 0.5em;
+			color: white;
+		}
+		p, table, a {
+			color: white;
+			font-family: 'Old Standard TT', serif;
+			font-size: 1.5em;
+			text-align: center;
+			padding: 1em;
+		}
+		iframe {
+			padding-top: 3em;
+		}
+		table {
+			padding-top: 1em;
+		}
+		.modalDialog {
+		    position: fixed;
+		    font-family: Arial, Helvetica, sans-serif;
+		    top: 0;
+		    right: 0;
+		    bottom: 0;
+		    left: 0;
+		    background: rgba(0,0,0,0.8);
+		    z-index: 999;
+		    opacity:0;
+		    transition: opacity 400ms ease-in;
+		    pointer-events: none;
+		}
+
+		.modalDialog:target {
+		    opacity:1;
+		    pointer-events: auto;
+		}
+
+		.modalDialog > div {
+		    width: 400px;
+		    position: relative;
+		    margin: 10% auto;
+		    padding: 5px 20px 13px 20px;
+		    border-radius: 10px;
+		    background: #fff;
+		    background: linear-gradient(#999, #222);
+		}
+
+		.close {
+		    background: #606061;
+		    color: #FFFFFF;
+		    line-height: 25px;
+		    float: right;
+		    right: -12px;
+		    text-align: center;
+		    top: -10px;
+		    width: 24px;
+		    text-decoration: none;
+		    font-weight: bold;
+		    border-radius: 12px;
+		    box-shadow: 1px 1px 3px #000;
+		}
+
+		.close:hover { background: #00d9ff; }
+		@media all and (min-width: 768px) {
+		    .nav {text-align:left;flex:1 auto;order:1;}
+		    .article {flex:5 0px;order:2;}
+		    footer {order:3;}
+		}
+		#tri {
+			margin-top: 80px;
+		    width: 200px;
+		    height: 180px;
+		    background: url(triforce_giphy.gif);
+		    position :relative;
+		    animation: triforce 5s infinite;
+		}
+		@keyframes triforce {
+   			0%   {left: 30px;}
+   			100% {left: 310px;}
+   		}
